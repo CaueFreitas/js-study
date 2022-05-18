@@ -15,7 +15,7 @@ class Calculator{
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
     appendNumber(number){
-        if (number === '.' && this.currentOperand.includes('.')) return 
+        if (number === ',' && this.currentOperand.includes('.')) return 
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
     chooseOperation(operation){
@@ -40,7 +40,7 @@ class Calculator{
             case '-':
                  computation = prev - current
                  break
-            case '*':
+            case 'x':
                  computation = prev * current
                  break
             case '÷':
@@ -62,7 +62,7 @@ class Calculator{
         if (isNaN(integerDigits)){
             integerDisplay = ''
         } else {
-            integerDisplay = integerDigits.toLocaleString('en',{
+            integerDisplay = integerDigits.toLocaleString('pt',{
                 maximumFractionDigits:0 })
         }
         if (decimalDigits != null ) {
